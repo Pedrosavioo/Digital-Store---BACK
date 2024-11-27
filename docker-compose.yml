@@ -5,8 +5,6 @@ services:
       build: .
       ports:
          - 3001:3001
-      environment:
-         - DB_HOST=db
       volumes:
          - .:/backend
       container_name: backend
@@ -19,7 +17,6 @@ services:
       ports:
          - 3306:3306
       environment:
-         - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+         - MYSQL_ROOT_PASSWORD=${MYSQL_PASSWORD}
       restart: always
       container_name: mysql
-

@@ -54,12 +54,12 @@ ProductOption.init(
          type: DataTypes.STRING,
          allowNull: false,
       },
-      created_at: {
+      createdAt: {
          type: DataTypes.DATE,
          allowNull: false,
          defaultValue: Sequelize.fn("NOW"),
       },
-      updated_at: {
+      updatedAt: {
          type: DataTypes.DATE,
          allowNull: false,
          defaultValue: Sequelize.fn("NOW"),

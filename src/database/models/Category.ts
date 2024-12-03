@@ -31,12 +31,12 @@ Category.init(
          allowNull: true,
          defaultValue: false, // Valor padrão
       },
-      created_at: {
+      createdAt: {
          type: DataTypes.DATE,
          allowNull: false,
          defaultValue: Sequelize.fn("NOW"),
       },
-      updated_at: {
+      updatedAt: {
          type: DataTypes.DATE,
          allowNull: false,
          defaultValue: Sequelize.fn("NOW"),

@@ -6,6 +6,7 @@ const config: Options = {
    password: process.env.MYSQL_PASSWORD,
    database: process.env.MYSQL_DATABASE,
    host: process.env.DB_HOST || "db",
+   timezone: "-03:00", // Fuso horário de Brasília (GMT-3)
    dialect: "mysql",
 };
 

@@ -2,9 +2,9 @@ import { CreationAttributes } from "sequelize";
 import User from "../database/models/User";
 import HttpResponse from "../utils/httpResponse";
 import BcryptService from "./bcrypt.service";
-import IUser from "../interfaces/interface";
 import { NotFoundException } from "../utils/exception";
 import { response } from "express";
+import { IUser } from "../interfaces/interface";
 
 class UserServices {
    private Bcrypt;

@@ -1,8 +1,8 @@
 import { NextFunction, Request, Response } from "express";
 import JwtTokenService from "../services/jwt.service";
 import User from "../database/models/User";
-import { NotFoundException } from "../utils/exception";
-import IUser from "../interfaces/interface";
+import { NotFoundException, UnauthorizedException } from "../utils/exception";
+import { IUser } from "../interfaces/interface";
 
 declare global {
    namespace Express {
@@ -40,7 +40,7 @@ export default async function authMiddleware(
       }
 
       if (!token) {
-         console.log('token nao informado');
+         throw new UnauthorizedException('No access permission')
       }
    } catch (error) {
       next(error);

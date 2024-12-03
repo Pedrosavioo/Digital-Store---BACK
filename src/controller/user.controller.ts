@@ -4,10 +4,10 @@ import {
    PasswordMismatchException,
    UnauthorizedException,
 } from "../utils/exception";
-import IUser from "../interfaces/interface";
 import UserServices from "../services/user.service";
 import { schema } from "../database/config/database";
 import JwtTokenService from "../services/jwt.service";
+import { IUser } from "../interfaces/interface";
 
 interface IUserBody extends IUser {
    confirmPassword: string;

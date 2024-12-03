@@ -37,12 +37,12 @@ User.init(
          type: sequelize.STRING,
          allowNull: false,
       },
-      created_at: {
+      createdAt: {
          type: sequelize.DATE,
          allowNull: false,
          defaultValue: sequelize.fn("NOW"),
       },
-      updated_at: {
+      updatedAt: {
          type: sequelize.DATE,
          allowNull: false,
          defaultValue: sequelize.fn("NOW"),

@@ -1,5 +1,8 @@
 import { Model, DataTypes, Sequelize } from "sequelize";
 import db from "."; 
+import ProductImage from "./ProductImage";
+import ProductOption from "./ProductOptions";
+import ProductCategoryOption from "./ProductCategoryOptions";
 
 class Product extends Model {
    declare id: number;
@@ -75,5 +78,9 @@ Product.init(
       underscored: true,
    }
 );
+
+Product.hasMany(ProductImage, { foreignKey: 'productId', as: 'images' });
+Product.hasMany(ProductOption, { foreignKey: 'productId', as: 'options' });
+Product.hasMany(ProductCategoryOption, { foreignKey: 'productId', as: 'categories' });
 
 export default Product;

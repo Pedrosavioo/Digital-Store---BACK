@@ -11,6 +11,10 @@ app.use(express.json());
 app.use(cors());
 app.use(cookieParser());
 
+app.get('/', (req, res) => {      
+   res.status(200).send('Wellcome to my project API')
+})
+
 app.use("/v1", router);
 
 app.use(errorMiddleware);

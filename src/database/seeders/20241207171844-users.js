@@ -11,7 +11,7 @@ module.exports = {
          {
             firstname: "pedro",
             surname: "savio",
-            email: "psavio@gmaail.com",
+            email: "psavio@gmail.com",
             password: await bcrypt.hash(
                "senha12345",
                Number(process.env.BCRYPT_SALTS) || 10
@@ -20,7 +20,7 @@ module.exports = {
          {
             firstname: "jose",
             surname: "carlos",
-            email: "josecarlos@gmaail.com",
+            email: "josecarlos@gmail.com",
             password: await bcrypt.hash(
                "senha12345",
                Number(process.env.BCRYPT_SALTS) || 10
@@ -29,7 +29,7 @@ module.exports = {
          {
             firstname: "luis",
             surname: "felipe",
-            email: "luisfelipe@gmaail.com",
+            email: "luisfelipe@gmail.com",
             password: await bcrypt.hash(
                "senha12345",
                Number(process.env.BCRYPT_SALTS) || 10

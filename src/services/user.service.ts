@@ -2,7 +2,7 @@ import { CreationAttributes } from "sequelize";
 import User from "../database/models/User";
 import HttpResponse from "../utils/httpResponse";
 import BcryptService from "./bcrypt.service";
-import { NotFoundException } from "../utils/exception";
+import { NotFoundException, UnauthorizedException } from "../utils/exception";
 import { response } from "express";
 import { IUser } from "../interfaces/interface";
 
@@ -121,11 +121,25 @@ class UserServices {
       }
    }
 
-   public async deleteUser(email: string) {
+   public async deleteUser(userLogged: any, id: number) {
       try {
+         const user = await User.findOne({
+            where: {
+               id: id,
+            },
+         });
+
+         if (!user) {
+            throw new NotFoundException("User not found");
+         }
+
+         if (userLogged.id !== id) {
+            throw new UnauthorizedException( "No access permission");
+         }
+
          const NumberUsersDeleted = await User.destroy({
             where: {
-               email: email,
+               email: userLogged.email,
             },
          });
 

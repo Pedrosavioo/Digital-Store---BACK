@@ -54,6 +54,31 @@ module.exports = {
             slug: "health",
             use_in_menu: false,
          },
+         {
+            name: "Automotive",
+            slug: "automotive",
+            use_in_menu: true,
+         },
+         {
+            name: "Music Instruments",
+            slug: "music-instruments",
+            use_in_menu: true,
+         },
+         {
+            name: "Garden & Outdoors",
+            slug: "garden-outdoors",
+            use_in_menu: false,
+         },
+         {
+            name: "Pet Supplies",
+            slug: "pet-supplies",
+            use_in_menu: true,
+         },
+         {
+            name: "Travel",
+            slug: "travel",
+            use_in_menu: false,
+         },
       ]);
    },
 

@@ -102,11 +102,13 @@ class UserController {
    public async delete(req: Request, res: Response, next: NextFunction) {
       try {
          const authUser = req.authUser;
+         const id = Number(req.params.id);
 
-         await this.service.deleteUser(authUser.email);
+         await this.service.deleteUser(authUser, id);
 
          res.status(204).send("");
       } catch (error) {
+         console.log(error);
          next(error);
       }
    }

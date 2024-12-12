@@ -36,7 +36,15 @@ npx sequelize db:create
 npx sequelize db:migrate
 ```
 
-### 📦 Importar Rotas para Insomnia/Postman
+### 🧪 Executando Testes Automatizados
+
+Certifique-se de estar na raiz do projeto, e execute o seguinte comando:
+
+```bash
+npm test
+```
+
+### 📦 Testes Manuais
 
 Para facilitar o teste das rotas da API, você pode importar um arquivo JSON contendo as rotas no **Insomnia** ou **Postman**.
 

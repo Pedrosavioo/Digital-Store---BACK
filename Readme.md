@@ -14,23 +14,23 @@ cp .env.example .env
 
 2. Edite o arquivo `.env` com as variáveis apropriadas.
 
-### 📦 Passo 3: Instalar Dependências
+### 📦 Passo 2: Instalar Dependências
 ```bash
 npm i
 ```
 
-### 🔄 Passo 4: Compilar código TypeScript em JavaScript
+### 🔄 Passo 3: Compilar código TypeScript em JavaScript
 ```bash
 npm run build
 ```
 
-### 🐳 Passo 5: Executar o Projeto com Docker
+### 🐳 Passo 4: Executar o Projeto com Docker
 1. Iniciar o Docker Compose: No terminal, execute o comando abaixo para iniciar o Docker Compose em segundo plano, criando o container do backend e do banco de dados. Certifique-se de estar na raiz do projeto:
 ```bash
 docker-compose up -d
 ```
 
-### 🛠️ Passo 6: Criar Banco de Dados e Executar as Migrations
+### 🛠️ Passo 5: Criar Banco de Dados e Executar as Migrations
 1. Acessar o Container do Backend: No terminal, entre no container do backend para rodar os comandos de banco de dados:
 ```bash
 docker exec -it backend sh
@@ -45,6 +45,11 @@ npx sequelize db:create
 ```bash
 npx sequelize db:migrate
 ```
+
+4. Popular banco de dados: Com as tabela devidamente criadas, execute o comando abaixo para popular o banco de dados:
+```bash
+npx sequelize db:seed:all
+```   
 
 ### 🧪 Executando Testes Automatizados
 

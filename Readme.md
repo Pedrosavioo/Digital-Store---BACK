@@ -14,7 +14,7 @@ cp .env.example .env
 
 2. Edite o arquivo `.env` com as variáveis apropriadas.
 
-### 📦 Passo 3: Intalar Dependências
+### 📦 Passo 3: Instalar Dependências
 ```bash
 npm i
 ```

@@ -14,13 +14,18 @@ cp .env.example .env
 
 2. Edite o arquivo `.env` com as variáveis apropriadas.
 
-### 🐳 Passo 2: Executar o Projeto com Docker
+### 📦 Passo 3: Intalar Dependências
+```bash
+npm i
+```
+
+### 🐳 Passo 4: Executar o Projeto com Docker
 1. Iniciar o Docker Compose: No terminal, execute o comando abaixo para iniciar o Docker Compose em segundo plano, criando o container do backend e do banco de dados. Certifique-se de estar na raiz do projeto:
 ```bash
 docker-compose up -d
 ```
 
-### 🛠️ Passo 3: Criar Banco de Dados e Executar as Migrations
+### 🛠️ Passo 5: Criar Banco de Dados e Executar as Migrations
 1. Acessar o Container do Backend: No terminal, entre no container do backend para rodar os comandos de banco de dados:
 ```bash
 docker exec -it backend sh
@@ -44,7 +49,7 @@ Certifique-se de estar na raiz do projeto, e execute o seguinte comando:
 npm test
 ```
 
-### 📦 Testes Manuais
+### 💻 Testes Manuais
 
 Para facilitar o teste das rotas da API, você pode importar um arquivo JSON contendo as rotas no **Insomnia** ou **Postman**.
 
